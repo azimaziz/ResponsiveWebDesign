@@ -1,0 +1,269 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>My Portfolio</h1>
+      <nav id="navbar">
+        <ul class="nav-list">
+          <li><a href="#welcome-section">About</a></li>
+          <li><ahref="#project-tile">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="welcome-section" class="welcome-section">
+        <h1 class="intro">Hi, I'm Azim</h1>
+          <p class="sub">
+            A Web Developer
+          </p>
+      </section>
+      <section id="projects" class="project-section">
+        <h2>These are my projects</h2>
+        <div class="grid">
+        <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form" target="_blank" class="project project-tile">
+          <img class="project-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuwzU5f5965lsvsjXl0upZG3hfJT1Z3DDg3Q&s" alt="project">
+          <p class="project-title">
+            Survey Form Page
+          </p>
+        </a>
+        <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-landing-page-project/build-a-product-landing-page" target="_blank" class="project project-tile">
+          <img class="project-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnlv2jgjF0J_SGUht3ZaO_8n7uASmjts5cA&s" target="_blank" alt="project">
+          <p class="project-title">
+            MCR Fan Page
+          </p>
+        </a>
+        </div>
+      </section>
+      <section id="contact" class="contact-section">
+        <h1 class="intro">Hit Me Up!</h1>
+          <p class="sub" >
+            *for work only ;)
+          </p>
+          <div class="contact-links">
+        <a href="https://facebook.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a id="profile-link" href="https://github.com/azimaziz" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+  --background-1: #1c1c29;
+  --background-2: #3b3b3b;
+  --main-text-1: orangered;
+  --main-text-2: #f24e3f;
+  --main-text-3: #f55f5f;
+  --sub-text: #e3e3e3;
+}
+
+body {
+  font-family: Poppins;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: var(--background-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+h1 {
+  color: var(--main-text-3);
+  font-size: min(3.5vw, 1.2em);
+  text-align: center;
+  padding-left: 20px;
+}
+
+nav {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+  margin-right: 2rem;
+}
+
+nav > ul > li {
+  color: var(--sub-text);
+  padding: 0.3rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav > ul > li:hover {
+  background-color: var(--sub-text);
+  color: #1b1b32;
+  cursor: pointer;
+  height: 40px;
+  margin: 0;
+  padding: 0.2rem;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-2);
+
+}
+
+.intro {
+  text-align: center;
+  color: var(--main-text-1);
+  font-size: 3rem;
+  font-weight: 1500px;
+}
+
+.sub {
+  column-width: 25rem;
+  font-size: 1.5rem;
+  color: var(--main-text-3);
+  text-align: center;
+  font-style: italic;
+}
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-1);
+  padding-top: 3rem;
+}
+
+h2 {
+  color: var(--main-text-3);
+  border-bottom: 0.1rem solid var(--sub-text);
+  padding-bottom: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 6rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--sub-text);
+  text-align: center;
+}
+
+.project {
+  background: var(--background-2);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-2);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin: 4rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+
+** end of undefined **
+
